@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="DL Company Tecnology crea aplicaciones prácticas para negocios y hogares. Conoce DL Inventario y DL Finanzas.">
+  <title>DL COMPANY TECNOLOGY | Tecnología útil para todos</title>
+  <style>
+    :root{--bg:#071426;--bg2:#0b1e36;--panel:#102743;--blue:#1685ff;--cyan:#39d5ff;--white:#f5f9ff;--muted:#b6c7dc;--line:rgba(148,190,235,.2);--green:#20c997}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,20,38,.96);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1.4px}
+    .logo{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan));font-size:21px;box-shadow:0 8px 24px #1685ff44}
+    .brand small{display:block;color:#a9c5e4;font-size:10px;letter-spacing:3px}
+    nav{display:flex;gap:22px;color:#d8e7f8;font-size:14px}
+    nav a:hover{color:var(--cyan)}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:30px;background:linear-gradient(110deg,#0874f5,#20c4f5);color:white;font-weight:800;border:0;box-shadow:0 8px 25px #0874f533}
+    .button.secondary{background:transparent;border:1px solid #4b8bc9;box-shadow:none}
+    .hero{background:radial-gradient(ellipse at 80% 30%,#0874f544,transparent 45%),linear-gradient(135deg,#071426,#0a2341);border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;padding:88px 0}
+    .tag{display:inline-block;padding:7px 13px;border:1px solid #42b9f655;border-radius:30px;color:#a9e8ff;background:#0c3153;font-size:12px;font-weight:800}
+    h1{font-size:clamp(39px,6vw,66px);line-height:1.07;letter-spacing:-2px;margin:22px 0}
+    .gradient{background:linear-gradient(90deg,#fff,#52d7ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .lead{font-size:18px;color:var(--muted);max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .visual{padding:22px;border:1px solid #69b8ff55;border-radius:24px;background:linear-gradient(145deg,#15375a,#0a1b31);box-shadow:0 25px 70px #0006}
+    .visual-head{display:flex;justify-content:space-between;gap:10px;font-weight:800;margin-bottom:17px}
+    .mock{background:#f4f8fd;color:#18314f;border-radius:15px;padding:18px}
+    .mock-title{font-weight:900;margin-bottom:12px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .metric{background:white;border:1px solid #dce8f5;border-radius:10px;padding:10px;font-size:10px;color:#6b7e96}
+    .metric b{display:block;color:#0d3158;font-size:17px;margin-top:5px}
+    .mock-row{padding:11px 8px;border-bottom:1px solid #e1eaf4;font-size:12px;display:flex;justify-content:space-between}
+    section{padding:76px 0}
+    .intro{max-width:720px;margin-bottom:32px}
+    .eyebrow{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:clamp(29px,4vw,43px);line-height:1.15;margin:10px 0 14px;letter-spacing:-1px}
+    .muted{color:var(--muted)}
+    .apps{background:#f3f7fc;color:#102744}
+    .apps .eyebrow{color:#0877e9}
+    .apps .muted{color:#5e7189}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card{background:white;border:1px solid #dbe6f2;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #17395d0d}
+    .card-top{padding:23px;display:flex;gap:15px;align-items:center;background:#f8fbff;border-bottom:1px solid #e5edf6}
+    .app-icon{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#0754b8,#1caaff);color:white;font-size:25px;font-weight:900}
+    .card:nth-child(2) .app-icon{background:linear-gradient(135deg,#087b72,#20c997)}
+    .card h3{margin:0;font-size:22px}.card-top p{margin:2px 0 0;color:#6a7d94;font-size:13px}
+    .card-body{padding:22px}.card-body p,.card-body li{color:#4c617a;font-size:14px}
+    .card-body ul{padding-left:20px;display:grid;gap:7px}
+    .plans{background:radial-gradient(ellipse at 50% 0,#1265bd33,transparent 55%),#081a30}
+    .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .plan{background:#f9fbff;color:#132d4c;border-radius:17px;padding:23px;display:flex;flex-direction:column;min-height:340px}
+    .plan.featured{outline:2px solid var(--blue);transform:translateY(-7px)}
+    .plan-label{font-size:11px;font-weight:900;letter-spacing:1.5px;color:#0877e9}
+    .plan h3{font-size:22px;margin:9px 0 2px}.plan p{font-size:13px;color:#647891}
+    .price{font-size:27px;font-weight:900;margin:8px 0}
+    .plan ul{padding-left:18px;color:#4b6079;font-size:13px;display:grid;gap:8px;margin-bottom:22px}
+    .plan .button{margin-top:auto}
+    .note{font-size:12px;color:#9eb4cf;margin-top:20px}
+    .story{background:#f3f7fc;color:#102744}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .story p{color:#5a6f89}
+    .quote{background:white;border:1px solid #dce7f3;border-radius:18px;padding:25px}
+    .quote h3{font-size:24px;margin:7px 0}
+    .contact{text-align:center;background:linear-gradient(130deg,#0c2a4c,#071426)}
+    .contact p{max-width:650px;margin:0 auto 25px;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:26px 0;color:#a9bdd5;font-size:12px}
+    .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:820px){nav{display:none}.hero-grid,.story-grid{grid-template-columns:1fr}.hero-grid{padding:60px 0}.cards,.plan-grid{grid-template-columns:1fr}.plan.featured{transform:none}}
+    @media(max-width:460px){.nav{min-height:68px}.brand{font-size:13px}.brand small{font-size:9px}.nav>.button{font-size:12px;padding:10px 12px}.hero-grid{gap:28px}.visual{padding:12px}.mock{padding:11px}.metric{padding:7px}.metric b{font-size:14px}section{padding:58px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><span class="logo">DL</span><span>DL COMPANY<small>TECNOLOGY</small></span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#apps">Aplicaciones</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="button" href="#apps">Conocer apps</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">TECNOLOGÍA PARA NECESIDADES REALES</span>
+        <h1>Ideas que se convierten en <span class="gradient">soluciones digitales.</span></h1>
+        <p class="lead">En DL COMPANY TECNOLOGY creamos aplicaciones prácticas e intuitivas para ayudar a las personas y los negocios a organizar mejor su día a día.</p>
+        <div class="actions"><a class="button" href="#apps">Explorar aplicaciones ↓</a><a class="button secondary" href="#nosotros">Conocer la empresa</a></div>
+      </div>
+      <div class="visual" aria-label="Vista ilustrativa de una aplicación de inventario">
+        <div class="visual-head"><span>▦ DL Inventario</span><span>Panel de ejemplo</span></div>
+        <div class="mock">
+          <div class="mock-title">Resumen de inventario</div>
+          <div class="metrics">
+            <div class="metric">Productos<b>202</b></div>
+            <div class="metric">Stock bajo<b>12</b></div>
+            <div class="metric">Categorías<b>08</b></div>
+          </div>
+          <div class="mock-row"><span>Aceite de oliva</span><b>25 unidades</b></div>
+          <div class="mock-row"><span>Leche en polvo</span><b>32 unidades</b></div>
+          <div class="mock-row"><span>Detergente</span><b>15 unidades</b></div>
+          <div class="mock-row"><span>Papel higiénico</span><b>40 unidades</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apps" id="apps">
+    <div class="wrap">
+      <div class="intro"><div class="eyebrow">Nuestras aplicaciones</div><h2>Herramientas creadas para simplificar tareas.</h2><p class="muted">Conoce las soluciones que estamos desarrollando. Las pantallas ilustrativas de esta página son ejemplos de presentación.</p></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top"><div class="app-icon">▦</div><div><h3>DL Inventario</h3><p>Control y organización para tu negocio.</p></div></div>
+          <div class="card-body"><p>Una herramienta para registrar y organizar productos de comercios y negocios.</p><ul><li>Registro y búsqueda de productos.</li><li>Organización por categorías.</li><li>Control de cantidades y precios.</li><li>Opciones de personalización según el plan.</li></ul><a class="button" href="#planes">Ver propuesta de planes</a></div>
+        </article>
+        <article class="card">
+          <div class="card-top"><div class="app-icon">↗</div><div><h3>DL Finanzas</h3><p>Tus finanzas, más organizadas.</p></div></div>
+          <div class="card-body"><p>Una aplicación orientada a organizar las finanzas del hogar y visualizar mejor los movimientos del mes.</p><ul><li>Registro de ingresos y gastos.</li><li>Organización del presupuesto mensual.</li><li>Visualización de movimientos y balance.</li><li>Funciones avanzadas en definición.</li></ul><a class="button" href="#contacto">Solicitar información</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans" id="planes">
+    <div class="wrap">
+      <div class="intro"><div class="eyebrow">Planes y acceso</div><h2>Crece a tu ritmo con DL Inventario.</h2><p class="muted">Esta es una propuesta preliminar. Los precios y funciones finales se confirmarán al terminar la revisión técnica de las aplicaciones.</p></div>
+      <div class="plan-grid">
+        <article class="plan"><div class="plan-label">GRATIS</div><h3>Para comenzar</h3><p>Funciones esenciales para probar la aplicación.</p><div class="price">$0 COP</div><ul><li>Hasta 100 productos.</li><li>Almacenamiento local en el dispositivo.</li><li>Funciones básicas.</li><li>Copias de seguridad manuales.</li></ul><a class="button" href="#contacto">Más información</a></article>
+        <article class="plan featured"><div class="plan-label">PRO · SUSCRIPCIÓN</div><h3>Más capacidad</h3><p>Para negocios que necesitan administrar más.</p><div class="price">Precio por definir</div><ul><li>Productos ilimitados.</li><li>Almacenamiento local.</li><li>Funciones de inventario disponibles.</li><li>Copia de seguridad y restauración manual.</li><li>Sin sincronización en la nube.</li></ul><a class="button" href="#contacto">Conocer PRO</a></article>
+        <article class="plan"><div class="plan-label">PREMIUM · MEMBRESÍA</div><h3>Acceso conectado</h3><p>Para trabajar desde distintos dispositivos.</p><div class="price">Precio por definir</div><ul><li>Productos ilimitados.</li><li>Base de datos privada en la nube.</li><li>Acceso desde celular y computador.</li><li>Sincronización automática.</li><li>Personalización según alcance.</li></ul><a class="button" href="#contacto">Conocer Premium</a></article>
+      </div>
+      <p class="note">* Los planes son una propuesta y pueden cambiar. Las funciones y los precios se confirmarán antes de su lanzamiento.</p>
+    </div>
+  </section>
+
+  <section class="story" id="nosotros">
+    <div class="wrap story-grid">
+      <div><div class="eyebrow">Sobre nosotros</div><h2>Una idea nacida de una necesidad real.</h2><p>La historia comenzó con un problema de inventario en un supermercado donde trabajaba el fundador. Para organizar mejor los productos, creó una aplicación propia. Durante ese proceso descubrió que la misma solución podía ayudar a otros compañeros y negocios.</p><p>De esa experiencia nació la motivación de convertir ideas en herramientas digitales útiles. DL Inventario y DL Finanzas representan ese propósito.</p></div>
+      <div class="quote"><div class="eyebrow">Nuestro propósito</div><h3>Transformamos problemas reales en soluciones tecnológicas.</h3><p>Creemos que la tecnología debe simplificar la vida, ayudar a tomar mejores decisiones y estar al alcance de quienes la necesitan.</p><p><b>Misión:</b> desarrollar aplicaciones intuitivas y confiables que resuelvan necesidades cotidianas de personas y negocios.</p><p><b>Visión:</b> ser reconocidos por crear soluciones digitales que aporten valor real.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap"><div class="eyebrow">Hablemos de tecnología</div><h2>¿Tienes una idea o necesitas una solución?</h2><p>Estamos construyendo herramientas digitales para negocios y hogares. Escríbenos cuando quieras conocer más sobre nuestras aplicaciones y próximos servicios.</p><a class="button" href="#apps">Ver nuestras aplicaciones</a></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><b>DL COMPANY TECNOLOGY</b><span>Soluciones tecnológicas que simplifican la vida.</span><span>© 2026 DL COMPANY TECNOLOGY</span></div></footer>
+</body>
+</html>
